@@ -47,6 +47,11 @@ export const metadata: Metadata = {
       "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80",
     ],
   },
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+    shortcut: "/logo.png",
+  },
   robots: {
     index: true,
     follow: true,
