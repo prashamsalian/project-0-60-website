@@ -1,7 +1,6 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
 
 const values = [
@@ -11,34 +10,7 @@ const values = [
   "Every build treated like it's our own car",
 ];
 
-function StatCounter({
-  value,
-  suffix,
-  label,
-  active,
-}: {
-  value: number;
-  suffix: string;
-  label: string;
-  active: boolean;
-}) {
-  const count = useCounter(value, 1800, active);
-  return (
-    <div className="text-center p-6 border border-border-gold hover:border-primary/50 transition-colors duration-300">
-      <div className="text-4xl font-serif font-bold text-primary">
-        {count}
-        {suffix}
-      </div>
-      <div className="text-muted text-sm tracking-widest uppercase mt-2">
-        {label}
-      </div>
-    </div>
-  );
-}
-
 export default function About() {
-  const ref = useRef(null);
-  useInView(ref, { once: true });
 
   return (
     <section id="about" className="section-padding bg-dark relative overflow-hidden">
